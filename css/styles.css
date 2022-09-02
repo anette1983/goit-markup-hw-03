@@ -16,6 +16,7 @@
   --logo-font: "Raleway", sans-serif;
 }
 
+
 body {
   font-family: var(--main-font);
   font-size: 14px;
@@ -25,13 +26,31 @@ body {
   color: var(--primary-text-color);
 }
 
+.container {
+  margin-left: auto;
+  margin-right: auto;
+  width: 1200px;
+  padding-left: 15px;
+  padding-right: 15px;
+  outline: 5px solid tomato;
+}
 .list {
   padding: 0;
+  margin: 0;
   list-style: none;
 }
 
 .link {
   text-decoration: none;
+}
+
+h1, h2, h3, p {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+img {
+  display: block;
 }
 
 .logo-top,

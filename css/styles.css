@@ -32,7 +32,7 @@ body {
   width: 1200px;
   padding-left: 15px;
   padding-right: 15px;
-  outline: 5px solid tomato;
+  outline: 2px solid tomato;
 }
 .list {
   padding: 0;
@@ -69,6 +69,11 @@ img {
   color: var(--accent-color);
 }
 
+
+.nav-list {
+  display: flex;
+}
+
 .nav-item, .contact-item {
   font-weight: 500;
   line-height: 1.14;
@@ -87,6 +92,10 @@ img {
   color: var(--accent-color);
 } 
 
+
+.contact-list {
+  display: flex;
+}
 
 .contact-item {
   color: var(--primary-text-color);
@@ -110,6 +119,9 @@ img {
 }
 
 .hero-button {
+  padding: 0;
+  border: none;
+  /* правильно ли сбросила геометрию кнопки? после просмотра репеты проверить */
   font-family: inherit;
   font-weight: 700;
   font-size: 16px;
@@ -122,6 +134,7 @@ img {
   border-radius: 4px;
 
   cursor: pointer;
+  outline: 5px solid red;
 }
 
 .hero-button:hover,
@@ -136,6 +149,10 @@ img {
   letter-spacing: 0.03em;
 
   color: var(--secondary-text-color);
+}
+
+.features-list {
+  display: flex;
 }
 
 .features-title {
@@ -160,8 +177,16 @@ img {
   overflow: hidden;
 }
 
+.about-list {
+  display: flex;
+}
+
 .team {
   background-color: var(--secondary-fill-color);
+}
+
+.team-list {
+  display: flex;
 }
 
 .team-card {
@@ -219,8 +244,13 @@ img {
 /* Стилізація сторінки "Портфоліо" */
 
 
+.filter-list {
+  display: flex;
+}
 
 .filter-button {
+  padding: 0;
+
   background-color: var(--secondary-fill-color);
   border-radius: 4px;
   border: none;
@@ -243,6 +273,10 @@ img {
 }
 
 
+.work-list {
+  display: flex;
+  flex-wrap: wrap;
+}
 
 .work-title {
   font-size: 18px;

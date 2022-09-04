@@ -21,19 +21,29 @@ body {
   font-family: var(--main-font);
   font-size: 14px;
   font-style: normal;
+  line-height: 1.7;
+  /* Додала line-height, тому що, чомусь вона не відображалась у елементів у браузері */
   letter-spacing: 0.03em;
   background-color: var(--primary-fill-color);
   color: var(--primary-text-color);
 }
 
 .container {
-  margin-left: auto;
-  margin-right: auto;
+  
   width: 1200px;
   padding-left: 15px;
   padding-right: 15px;
+  /* Или нужно 1170? */
+  margin-left: auto;
+  margin-right: auto;
+
   outline: 2px solid tomato;
 }
+
+/* .container.header-positioning {
+  display: flex;
+
+} */
 .list {
   padding: 0;
   margin: 0;
@@ -49,12 +59,20 @@ h1, h2, h3, p {
   margin-bottom: 0;
 }
 
-img {
-  display: block;
+
+.header {
+  padding-top: 24px;
+  padding-bottom: 25px;
+}
+
+.header-position {
+  display: flex;
+  align-items: center;
 }
 
 .logo-top,
 .logo-bottom {
+
   font-family: var(--logo-font);
   font-weight: 700;
   font-size: 26px;
@@ -62,6 +80,8 @@ img {
 }
 
 .logo-top {
+  margin-right: 93px;
+
   color: var(--logo-dark-color);
 }
 
@@ -72,43 +92,65 @@ img {
 
 .nav-list {
   display: flex;
+  
 }
 
-.nav-item, .contact-item {
+.nav-item:not(:last-child) {
+  margin-right: 50px;
+
+}
+
+.nav-link, .contact-link {
   font-weight: 500;
   line-height: 1.14;
   letter-spacing: 0.02em;
 }
 
-.nav-item {
+.nav-link {
   color: var(--secondary-text-color);
 }
 
-.nav-item:hover,
-.nav-item:focus,
-.contact-item:hover,
-.contact-item:focus,
-.current.nav-item {
+.nav-link:hover,
+.nav-link:focus,
+.contact-link:hover,
+.contact-link:focus,
+.current.nav-link {
   color: var(--accent-color);
 } 
 
 
 .contact-list {
   display: flex;
+  margin-left: auto;
+}
+
+.contact-link {
+  color: var(--primary-text-color);
+}
+
+.contact-item + .contact-item {
+  margin-left: 12px;
 }
 
 .contact-item {
-  color: var(--primary-text-color);
+  outline: 2px solid tomato;
 }
 
 
 .hero {
+
+  padding-top: 200px;
+  padding-bottom: 200px;
   background-color: var(--dark-fill-color);
   text-align: center;
   letter-spacing: 0.06em;
 }
 
 .hero-text {
+
+  margin-bottom: 30px;
+
+
   font-weight: 900;
   font-size: 44px;
   line-height: 1.4;
@@ -119,9 +161,10 @@ img {
 }
 
 .hero-button {
-  padding: 0;
-  border: none;
-  /* правильно ли сбросила геометрию кнопки? после просмотра репеты проверить */
+
+  min-width: 216px;
+  padding: 10px 32px;
+  
   font-family: inherit;
   font-weight: 700;
   font-size: 16px;
@@ -134,7 +177,6 @@ img {
   border-radius: 4px;
 
   cursor: pointer;
-  outline: 5px solid red;
 }
 
 .hero-button:hover,
@@ -143,6 +185,9 @@ img {
 }
 
 .section-title {
+
+  margin-bottom: 50px;
+
   font-size: 36px;
   line-height: 1.2;
   text-align: center;
@@ -151,11 +196,25 @@ img {
   color: var(--secondary-text-color);
 }
 
+.features {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+
 .features-list {
   display: flex;
 }
 
+.features-item {
+  width: 270px;
+}
+
+.features-item:not(:first-child) {
+  margin-left: 30px;
+}
 .features-title {
+  margin-bottom: 10px;
+
   font-size: 14px;
   line-height: 1.1;
   letter-spacing: 0.03em;
@@ -177,12 +236,26 @@ img {
   overflow: hidden;
 }
 
+.about{
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
 .about-list {
   display: flex;
 }
 
+.about-item + .about-item {
+  margin-left: 30px;
+}
+
+.about img {
+  display: block;
+}
+
 .team {
   background-color: var(--secondary-fill-color);
+  padding-top: 94px;
+  padding-bottom: 94px;
 }
 
 .team-list {
@@ -190,13 +263,28 @@ img {
 }
 
 .team-card {
+
+  width: 270px;
+
+  padding-bottom: 30px;
+
   background-color: var(--primary-fill-color);
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
 }
+
+.team-card + .team-card {
+  margin-left: 30px;
+}
+
+.team-card img {
+  display: block;
+  margin-bottom: 30px;
+}
 .team-name,
 .team-position {
+ 
   font-size: 16px;
   line-height: 1.2;
   text-align: center;
@@ -205,6 +293,7 @@ img {
 }
 
 .team-name {
+  margin-bottom: 10px;
   font-weight: 500;
   color: var(--secondary-text-color);
 }
@@ -215,13 +304,31 @@ img {
 
 .footer {
   background-color: var(--dark-fill-color);
+  padding-top: 60px;
+  padding-bottom: 60px;
 }
 
 .logo-bottom {
+  display:inline-block;
+  margin-bottom: 20px;
   color: var(--logo-light-color);
 }
 
+.footer-contacts {
+  display: inline-block;
+}
+
+.footer-contacts > li:not(:last-child) {
+  margin-bottom: 9px;
+}
+
+.footer-contacts > .item {
+  width: 231px;
+}
+
+
 .location {
+
   color: var(--light-text-color);
   font-style: normal;
   line-height: 1.7;
@@ -244,12 +351,28 @@ img {
 /* Стилізація сторінки "Портфоліо" */
 
 
+.works {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+
 .filter-list {
   display: flex;
 }
 
+.filter-item {
+
+  margin-bottom: 50px;
+}
+
+.filter-item:not(:first-child) {
+  margin-left: 8px;
+}
+
 .filter-button {
-  padding: 0;
+  display: inline-block;
+  min-width: 73px;
+  padding: 6px 22px;
 
   background-color: var(--secondary-fill-color);
   border-radius: 4px;
@@ -259,6 +382,7 @@ img {
   font-weight: 500;
   font-size: 16px;
   line-height: 1.6;
+  letter-spacing: inherit;
 
   color: var(--secondary-text-color);
 
@@ -276,6 +400,27 @@ img {
 .work-list {
   display: flex;
   flex-wrap: wrap;
+  /* justify-content: space-between; */
+}
+
+.work-item {
+  /* width: 370px; */
+  width: calc(100% - 60px) / 3;
+  /* проверить значения в макете еще раз */
+
+}
+
+/* .work-item:nth-child(3n) {
+  margin-right: 0;
+
+} */
+
+.work-item:not(:nth-child(3n)){
+  margin-right: 30px;
+}
+
+.work-tem:not(:nth-last-child(-n + 3)) {
+  margin-bottom: 30px;
 }
 
 .work-title {

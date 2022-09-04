@@ -21,34 +21,36 @@
     <link rel="stylesheet" href="./css/styles.css" />
   </head>
   <body>
-    <header>
-      <div class="container">
+    <header class="header">
+      <!-- Чи треба робити окремий дів з контейнером для секції хедер, чи можна 
+      прямо тегу хедер задати клас контейнер?-->
+      <div class="container header-position">
         <a href="./index.html" class="link logo-top" lang="en"
           ><span class="logo-accent">Web</span>Studio</a
         >
         <nav>
           <ul class="list nav-list">
-            <li>
-              <a href="./index.html" class="link nav-item">Студія</a>
+            <li class="nav-item">
+              <a href="./index.html" class="link nav-link">Студія</a>
             </li>
-            <li>
-              <a href="./portfolio.html" class="link current nav-item"
+            <li class="nav-item">
+              <a href="./portfolio.html" class="link current nav-link"
                 >Портфоліо</a
               >
             </li>
-            <li>
-              <a href="" class="link nav-item">Контакти</a>
+            <li class="nav-item">
+              <a href="" class="link nav-link">Контакти</a>
             </li>
           </ul>
         </nav>
         <ul class="list contact-list">
-          <li>
-            <a href="mailto:info@devstudio.com" class="link contact-item"
+          <li class="contact-item">
+            <a href="mailto:info@devstudio.com" class="link contact-link"
               >info@devstudio.com</a
             >
           </li>
-          <li>
-            <a href="tel:+380961111111" class="link contact-item"
+          <li class="contact-item">
+            <a href="tel:+380961111111" class="link contact-link"
               >+38 096 111 11 11</a
             >
           </li>
@@ -56,25 +58,25 @@
       </div>
     </header>
     <main>
-      <section>
+      <section class="works">
         <!-- Заголовок, який я сховала в css -->
 
         <div class="container">
           <h1 class="section-title hidden">Наші роботи</h1>
           <ul class="list filter-list">
-            <li>
+            <li class="filter-item">
               <button type="button" class="filter-button current">Усі</button>
             </li>
-            <li>
+            <li class="filter-item">
               <button type="button" class="filter-button">Веб-сайти</button>
             </li>
-            <li>
+            <li class="filter-item">
               <button type="button" class="filter-button">Додатки</button>
             </li>
-            <li>
+            <li class="filter-item">
               <button type="button" class="filter-button">Дизайн</button>
             </li>
-            <li>
+            <li class="filter-item">
               <button type="button" class="filter-button">Маркетинг</button>
             </li>
           </ul>

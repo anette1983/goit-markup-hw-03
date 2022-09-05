@@ -10,6 +10,8 @@
   --secondary-text-color: #212121;
   --light-text-color: #ffffff;
   --bottom-contacts-color: rgba(255, 255, 255, 0.6);
+  --header-border-color: #ececec;
+  --portfolio-border-color: #EEEEEE;
   --main-font: "Roboto", -apple-system, BlinkMacSystemFont, "Segoe UI", "Oxygen",
     "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
@@ -30,7 +32,7 @@ body {
 
 .container {
   
-  width: 1200px;
+  max-width: 1200px;
   padding-left: 15px;
   padding-right: 15px;
   /* Или нужно 1170? */
@@ -63,6 +65,7 @@ h1, h2, h3, p {
 .header {
   padding-top: 24px;
   padding-bottom: 25px;
+  border-bottom: 1px solid var(--header-border-color);
 }
 
 .header-position {
@@ -184,6 +187,10 @@ h1, h2, h3, p {
   background: var(--hero-btn-active-color);
 }
 
+.section {
+  padding-top: 94px;
+}
+
 .section-title {
 
   margin-bottom: 50px;
@@ -244,11 +251,15 @@ h1, h2, h3, p {
   display: flex;
 }
 
+.about-item {
+  width: 370px;
+}
+
 .about-item + .about-item {
   margin-left: 30px;
 }
 
-.about img {
+.about > img {
   display: block;
 }
 
@@ -278,7 +289,7 @@ h1, h2, h3, p {
   margin-left: 30px;
 }
 
-.team-card img {
+.team-card > img {
   display: block;
   margin-bottom: 30px;
 }
@@ -350,7 +361,7 @@ h1, h2, h3, p {
 
 /* Стилізація сторінки "Портфоліо" */
 
-
+ 
 .works {
   padding-top: 94px;
   padding-bottom: 94px;
@@ -358,6 +369,8 @@ h1, h2, h3, p {
 
 .filter-list {
   display: flex;
+  justify-content: center;
+  /* (margin-bottom: 50px поставила лішці, краще списку?;) */
 }
 
 .filter-item {
@@ -394,33 +407,30 @@ h1, h2, h3, p {
 .filter-button.current {
   background-color: var(--accent-color);
   color: var(--light-text-color);
+  /* filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25)); */
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
+    border-radius: 4px;
 }
 
 
 .work-list {
   display: flex;
   flex-wrap: wrap;
-  /* justify-content: space-between; */
+  gap: 30px;
 }
 
 .work-item {
-  /* width: 370px; */
-  width: calc(100% - 60px) / 3;
-  /* проверить значения в макете еще раз */
+  flex-basis: calc((100% - 60px) / 3);
 
 }
 
-/* .work-item:nth-child(3n) {
-  margin-right: 0;
 
-} */
 
-.work-item:not(:nth-child(3n)){
-  margin-right: 30px;
-}
-
-.work-tem:not(:nth-last-child(-n + 3)) {
-  margin-bottom: 30px;
+.work-item .border {
+  padding: 20px 24px;
+  border-right: 1px solid var(--portfolio-border-color);
+  border-bottom: 1px solid var(--portfolio-border-color);
+  border-left: 1px solid var(--portfolio-border-color);
 }
 
 .work-title {

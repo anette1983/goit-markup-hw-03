@@ -24,7 +24,7 @@ body {
   font-size: 14px;
   font-style: normal;
   line-height: 1.7;
-  /* Додала line-height, тому що, чомусь вона не відображалась у елементів у браузері */
+  /* Додала line-height, тому що чомусь вона перестала відображатись у елементів у браузері */
   letter-spacing: 0.03em;
   background-color: var(--primary-fill-color);
   color: var(--primary-text-color);
@@ -32,20 +32,14 @@ body {
 
 .container {
   
-  max-width: 1200px;
+  width: 1200px;
   padding-left: 15px;
   padding-right: 15px;
-  /* Или нужно 1170? */
   margin-left: auto;
   margin-right: auto;
 
-  outline: 2px solid tomato;
 }
 
-/* .container.header-positioning {
-  display: flex;
-
-} */
 .list {
   padding: 0;
   margin: 0;
@@ -110,6 +104,8 @@ h1, h2, h3, p {
 }
 
 .nav-link {
+  padding-top: 32px;
+  padding-bottom: 32px;
   color: var(--secondary-text-color);
 }
 
@@ -133,10 +129,6 @@ h1, h2, h3, p {
 
 .contact-item + .contact-item {
   margin-left: 12px;
-}
-
-.contact-item {
-  outline: 2px solid tomato;
 }
 
 
@@ -189,6 +181,7 @@ h1, h2, h3, p {
 
 .section {
   padding-top: 94px;
+  padding-bottom: 94px;
 }
 
 .section-title {
@@ -205,7 +198,6 @@ h1, h2, h3, p {
 
 .features {
   padding-top: 94px;
-  padding-bottom: 94px;
 }
 
 .features-list {
@@ -243,10 +235,6 @@ h1, h2, h3, p {
   overflow: hidden;
 }
 
-.about{
-  padding-top: 94px;
-  padding-bottom: 94px;
-}
 .about-list {
   display: flex;
 }
@@ -265,8 +253,6 @@ h1, h2, h3, p {
 
 .team {
   background-color: var(--secondary-fill-color);
-  padding-top: 94px;
-  padding-bottom: 94px;
 }
 
 .team-list {
@@ -329,7 +315,7 @@ h1, h2, h3, p {
   display: inline-block;
 }
 
-.footer-contacts > li:not(:last-child) {
+.footer-contacts > .item:not(:last-child) {
   margin-bottom: 9px;
 }
 
@@ -361,22 +347,13 @@ h1, h2, h3, p {
 
 /* Стилізація сторінки "Портфоліо" */
 
- 
-.works {
-  padding-top: 94px;
-  padding-bottom: 94px;
-}
 
 .filter-list {
   display: flex;
   justify-content: center;
-  /* (margin-bottom: 50px поставила лішці, краще списку?;) */
-}
-
-.filter-item {
-
   margin-bottom: 50px;
 }
+
 
 .filter-item:not(:first-child) {
   margin-left: 8px;

@@ -21,9 +21,7 @@
     <link rel="stylesheet" href="./css/styles.css" />
   </head>
   <body>
-    <header class="header">
-      <!-- Чи треба робити окремий дів з контейнером для секції хедер, чи можна 
-      прямо тегу хедер задати клас контейнер?-->
+    <header class="header border">
       <div class="container header-position">
         <a href="./index.html" class="link logo-top" lang="en"
           ><span class="logo-accent">Web</span>Studio</a
@@ -57,14 +55,15 @@
     </header>
     <main>
       <section class="hero">
-        <!-- Чи треба контент хіро огортати в контейнер? 
-        Репета чомусь не огорнув -->
         <div class="container">
           <h1 class="hero-text">Ефективні рішення для вашого бізнесу</h1>
           <button type="button" class="hero-button">Замовити послугу</button>
         </div>
       </section>
-      <section class="features section">
+      <section class="features">
+        <!-- Я не задала цій секції клас section, оскільки на відміну від трьох інших секцій з падінгом 94 px,
+        у яких є і верхній, і нижній падінг, у цієї на макеті нижнього падінгу нема, тому їй я додала 
+        його через окремий клас -->
         <div class="container">
           <h2 class="section-title hidden">Переваги</h2>
           <ul class="list features-list">
@@ -178,7 +177,7 @@
         </div>
       </section>
     </main>
-    <footer class="footer section">
+    <footer class="footer">
       <div class="container">
         <a href="./index.html" class="link logo-bottom" lang="en">
           <span class="logo-accent">Web</span>Studio</a

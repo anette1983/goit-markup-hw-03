@@ -55,6 +55,13 @@ h1, h2, h3, p {
   margin-bottom: 0;
 }
 
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+
 
 .header {
   padding-top: 24px;
@@ -149,6 +156,7 @@ h1, h2, h3, p {
   font-weight: 900;
   font-size: 44px;
   line-height: 1.4;
+  letter-spacing: 0.06em;
  
   text-transform: uppercase;
 
@@ -247,10 +255,6 @@ h1, h2, h3, p {
   margin-left: 30px;
 }
 
-.about > img {
-  display: block;
-}
-
 .team {
   background-color: var(--secondary-fill-color);
 }
@@ -263,8 +267,6 @@ h1, h2, h3, p {
 
   width: 270px;
 
-  padding-bottom: 30px;
-
   background-color: var(--primary-fill-color);
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
@@ -275,10 +277,6 @@ h1, h2, h3, p {
   margin-left: 30px;
 }
 
-.team-card > img {
-  display: block;
-  margin-bottom: 30px;
-}
 .team-name,
 .team-position {
  
@@ -297,6 +295,16 @@ h1, h2, h3, p {
 
 .team-position {
   color: var(--primary-text-color);
+}
+
+.team-content {
+  padding-top: 30px;
+  padding-bottom: 30px;
+/* Юля, на жаль, мені не вдалося встановити тут бокові паддінги, бо чомусь текст починав розбиватися на 2 строки і я не змогла
+зрозуміти, чому. Перепробувала багато варіантів. Буду рада підказці! Також мені чомусь не вдалося проставити зображенню нижній 
+марджин, щоб відділити його від наступного заголовку. Довелось брати заголовок і параграф в дів. Теж буду рада, якщо ти підкажеш,
+чому так вийшло.
+ */
 }
 
 .footer {

@@ -158,7 +158,7 @@ img {
 
 .hero-content {
 text-align: center;
-width: 696px;
+max-width: 696px;
 margin-left: auto;
 margin-right: auto;
 }

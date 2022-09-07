@@ -19,7 +19,9 @@
 }
 
 
+
 body {
+  
   font-family: var(--main-font);
   font-size: 14px;
   font-style: normal;
@@ -50,7 +52,13 @@ body {
   text-decoration: none;
 }
 
-h1, h2, h3, p {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
   margin-top: 0;
   margin-bottom: 0;
 }
@@ -144,14 +152,20 @@ img {
   padding-top: 200px;
   padding-bottom: 200px;
   background-color: var(--dark-fill-color);
-  text-align: center;
+  
   letter-spacing: 0.06em;
 }
 
+.hero-content {
+text-align: center;
+width: 696px;
+margin-left: auto;
+margin-right: auto;
+}
+
 .hero-text {
-
+  
   margin-bottom: 30px;
-
 
   font-weight: 900;
   font-size: 44px;
@@ -327,9 +341,6 @@ img {
   margin-bottom: 9px;
 }
 
-.footer-contacts > .item {
-  width: 231px;
-}
 
 
 .location {

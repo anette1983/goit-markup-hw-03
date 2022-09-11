@@ -25,8 +25,6 @@ body {
   font-family: var(--main-font);
   font-size: 14px;
   font-style: normal;
-  line-height: 1.7;
-  /* Додала line-height, тому що чомусь вона перестала відображатись у елементів у браузері */
   letter-spacing: 0.03em;
   background-color: var(--primary-fill-color);
   color: var(--primary-text-color);
@@ -179,7 +177,6 @@ margin-right: auto;
 
 .hero-button {
 
-  min-width: 216px;
   padding: 10px 32px;
   
   font-family: inherit;
@@ -191,6 +188,7 @@ margin-right: auto;
   color: var(--light-text-color);
   background-color: var(--accent-color);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border: none;
   border-radius: 4px;
 
   cursor: pointer;
@@ -241,6 +239,10 @@ margin-right: auto;
   letter-spacing: 0.03em;
   text-transform: uppercase;
   color: var(--secondary-text-color);
+}
+
+.features-info {
+  line-height: 1.7;
 }
 
 .hidden {
@@ -314,11 +316,6 @@ margin-right: auto;
 .team-content {
   padding-top: 30px;
   padding-bottom: 30px;
-/* Юля, на жаль, мені не вдалося встановити тут бокові паддінги, бо чомусь текст починав розбиватися на 2 строки і я не змогла
-зрозуміти, чому. Перепробувала багато варіантів. Буду рада підказці! Також мені чомусь не вдалося проставити зображенню нижній 
-марджин, щоб відділити його від наступного заголовку. Довелось брати заголовок і параграф в дів. Теж буду рада, якщо ти підкажеш,
-чому так вийшло.
- */
 }
 
 .footer {
